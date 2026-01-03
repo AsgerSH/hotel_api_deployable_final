@@ -1,6 +1,8 @@
 package dat.config;
 
 import dat.entities.Hotel;
+import dat.entities.Playlist;
+import dat.entities.PlaylistSong;
 import dat.entities.Room;
 import dat.security.entities.Role;
 import dat.security.entities.User;
@@ -47,6 +49,8 @@ public class HibernateConfig {
         configuration.addAnnotatedClass(Room.class);
         configuration.addAnnotatedClass(User.class);
         configuration.addAnnotatedClass(Role.class);
+        configuration.addAnnotatedClass(PlaylistSong.class);
+        configuration.addAnnotatedClass(Playlist.class);
     }
 
     private static EntityManagerFactory createEMF(boolean forTest) {
